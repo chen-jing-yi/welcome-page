@@ -1,0 +1,421 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Ultra&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  position: relative;
+  background-color: #72afff;
+  box-sizing: border-box;
+  border-bottom: solid 30px #ed42d9;
+  overflow: hidden;
+}
+
+.house {
+  position: fixed;
+  width: 450px;
+  height: 480px;
+  top: 150px;
+  left: 150px;
+}
+
+.roof {
+  position: absolute;
+  left: 30px;
+  top: 32px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-bottom: 150px solid #f9eb66;
+  border-left: 190px solid transparent;
+  border-right: 190px solid transparent;
+}
+
+.word {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  top: -90px;
+  left: -300px;
+}
+
+.word:hover {
+  display: none;
+  animation-direction: 2s;
+}
+
+h1 {
+  font-family: 'Ultra', serif;
+  font-size: 80px;
+  color: #c21cff;
+}
+
+.namecard {
+  position: absolute;
+  width: 380px;
+  height: 270px;
+  left: 30px;
+  top: 180px;
+  padding: 0px 20px 30px 20px;
+  overflow: hidden;
+  background-color: #e59834;
+  color: #fff;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 20px 25px 15px -15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 微軟正黑體;
+  transition: 0.5s;
+}
+.namecard hr {
+  border-color: #fff;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.namecard h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.namecard h3 {
+  font-size: 35px;
+  font-weight: 500;
+}
+.namecard span {
+  font-size: 20px;
+}
+.namecard h5 {
+  font-size: 20px;
+}
+
+.namecard:hover {
+  transform: translate(-10px, -15px);
+  box-shadow: 20px 25px -10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.rainbow {
+  position: relative;
+  height: 360px;
+  width: 720px;
+  top: 25px;
+  left: 340px;
+  transform: rotate(8deg);
+  z-index: -3;
+  animation-name: rainbowgo;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbowgo {
+  0%,100% {
+    opacity: 0;
+  }
+  20%,80% {
+    opacity: 0.25;
+  }
+  40%,60% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.R {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  background: red;
+  height: 330px;
+  width: 660px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.O {
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  background: orange;
+  height: 300px;
+  width: 600px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.Y {
+  position: absolute;
+  top: 60px;
+  left: 75px;
+  background: yellow;
+  height: 270px;
+  width: 540px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.G {
+  position: absolute;
+  top: 90px;
+  left: 100px;
+  background: green;
+  height: 240px;
+  width: 480px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.B {
+  position: absolute;
+  top: 121px;
+  left: 130px;
+  background: blue;
+  height: 210px;
+  width: 420px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.S {
+  position: absolute;
+  top: 150px;
+  left: 160px;
+  background: #3a00e8;
+  height: 180px;
+  width: 360px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.P {
+  position: absolute;
+  top: 181px;
+  left: 190px;
+  background: #7000e8;
+  height: 150px;
+  width: 300px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.Q {
+  position: absolute;
+  top: 220px;
+  left: 225px;
+  background: #72afff;
+  height: 130px;
+  width: 230px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.allrain {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  z-index: -3;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@keyframes falling {
+  0%,100% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  0% {
+    transform: translate(100%, 0px);
+  }
+  100% {
+    transform: translate(0px, 100%);
+  }
+}
+.allrain [class*='rain'] {
+  background-color: #fff;
+  width: 3px;
+  height: 60px;
+  animation: falling 0.5s infinite;
+}
+.allrain .rain1 {
+  position: absolute;
+  left: 3.7039868409%;
+  top: 25.2981727527%;
+  animation-delay: -0.1s;
+}
+.allrain .rain2 {
+  position: absolute;
+  left: 11.9751737198%;
+  top: 17.8770293841%;
+  animation-delay: -0.2s;
+}
+.allrain .rain3 {
+  position: absolute;
+  left: 74.8112248228%;
+  top: 1.5656337067%;
+  animation-delay: -0.3s;
+}
+.allrain .rain4 {
+  position: absolute;
+  left: 34.8014250015%;
+  top: 54.9912020905%;
+  animation-delay: -0.4s;
+}
+.allrain .rain5 {
+  position: absolute;
+  left: 29.9190602962%;
+  top: 15.6540781622%;
+  animation-delay: -0.5s;
+}
+.allrain .rain6 {
+  position: absolute;
+  left: 58.2134551694%;
+  top: 10.9082860546%;
+  animation-delay: -0.6s;
+}
+.allrain .rain7 {
+  position: absolute;
+  left: 16.9879171455%;
+  top: 66.5015800707%;
+  animation-delay: -0.7s;
+}
+.allrain .rain8 {
+  position: absolute;
+  left: 15.7608119308%;
+  top: 23.5890576664%;
+  animation-delay: -0.8s;
+}
+.allrain .rain9 {
+  position: absolute;
+  left: 53.8915030154%;
+  top: 86.8926763341%;
+  animation-delay: -0.9s;
+}
+.allrain .rain10 {
+  position: absolute;
+  left: 25.4037156392%;
+  top: 47.2563790754%;
+  animation-delay: -1s;
+}
+.allrain .rain11 {
+  position: absolute;
+  left: 72.4953087233%;
+  top: 35.1236515779%;
+  animation-delay: -1.1s;
+}
+.allrain .rain12 {
+  position: absolute;
+  left: 44.6806065423%;
+  top: 24.0551680391%;
+  animation-delay: -1.2s;
+}
+.allrain .rain13 {
+  position: absolute;
+  left: 12.0296818459%;
+  top: 17.6759222971%;
+  animation-delay: -1.3s;
+}
+.allrain .rain14 {
+  position: absolute;
+  left: 23.3746164704%;
+  top: -0.1159505398%;
+  animation-delay: -1.4s;
+}
+.allrain .rain15 {
+  position: absolute;
+  left: 46.8087255991%;
+  top: -7.4854359171%;
+  animation-delay: -1.5s;
+}
+.allrain .rain16 {
+  position: absolute;
+  left: 14.7385538433%;
+  top: 25.6956565938%;
+  animation-delay: -1.6s;
+}
+.allrain .rain17 {
+  position: absolute;
+  left: 47.5338066529%;
+  top: 0.170603986%;
+  animation-delay: -1.7s;
+}
+.allrain .rain18 {
+  position: absolute;
+  left: 3.3901353402%;
+  top: 1.0825629824%;
+  animation-delay: -1.8s;
+}
+.allrain .rain19 {
+  position: absolute;
+  left: 23.2397899075%;
+  top: 26.4568626908%;
+  animation-delay: -1.9s;
+}
+.allrain .rain20 {
+  position: absolute;
+  left: 9.5955263427%;
+  top: 61.0713075229%;
+  animation-delay: -2s;
+}
+.allrain .rain21 {
+  position: absolute;
+  left: 66.9469277129%;
+  top: 26.2945709989%;
+  animation-delay: -2.1s;
+}
+.allrain .rain22 {
+  position: absolute;
+  left: 25.2751287235%;
+  top: 73.1852568099%;
+  animation-delay: -2.2s;
+}
+.allrain .rain23 {
+  position: absolute;
+  left: 34.8662548625%;
+  top: 28.8597704526%;
+  animation-delay: -2.3s;
+}
+.allrain .rain24 {
+  position: absolute;
+  left: 46.226992846%;
+  top: 71.9738475282%;
+  animation-delay: -2.4s;
+}
+.allrain .rain25 {
+  position: absolute;
+  left: 84.5320845804%;
+  top: 51.1462972768%;
+  animation-delay: -2.5s;
+}
+.allrain .rain26 {
+  position: absolute;
+  left: 0.5497565416%;
+  top: 25.8515118587%;
+  animation-delay: -2.6s;
+}
+.allrain .rain27 {
+  position: absolute;
+  left: 78.7737071438%;
+  top: 33.852680534%;
+  animation-delay: -2.7s;
+}
+.allrain .rain28 {
+  position: absolute;
+  left: 7.7712800551%;
+  top: -6.8437985215%;
+  animation-delay: -2.8s;
+}
+.allrain .rain29 {
+  position: absolute;
+  left: 24.3308926403%;
+  top: 48.4131380962%;
+  animation-delay: -2.9s;
+}
+.allrain .rain30 {
+  position: absolute;
+  left: 27.4337756005%;
+  top: 63.5511484261%;
+  animation-delay: -3s;
+}
